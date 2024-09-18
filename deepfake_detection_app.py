@@ -1,8 +1,8 @@
 import tensorflow as tf
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 # Define paths to the dataset
-train_data_dir = "C:\\Users\\LENOVO\\Downloads\\img_data-20240915T141034Z-001\\img_data\\train_img"
-test_data_dir = "C:\\Users\\LENOVO\\Downloads\\img_data-20240915T141034Z-001\\img_data\\test_img"
+train_data_dir = "C:\\Users\\LENOVO\\Downloads\\img_data-20240915T141034Z-001\\img_data\\train_img" #path to train data 
+test_data_dir = "C:\\Users\\LENOVO\\Downloads\\img_data-20240915T141034Z-001\\img_data\\test_img" #path to test data
 train_datagen = ImageDataGenerator(
     rescale=1./255, # Example preprocessing - normalize pixel values
     # Add other data augmentation options here if needed
