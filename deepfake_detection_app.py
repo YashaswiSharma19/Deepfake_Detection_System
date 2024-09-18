@@ -8,7 +8,7 @@ from PIL import Image
 # Function to load the pre-trained model
 @st.cache(allow_output_mutation=True)
 def load_model():
-    model = tf.keras.models.load_model("C:\\Users\\LENOVO\\Downloads\\deepfake_detection_model.h5")
+    model = tf.keras.models.load_model("C:\\Users\\LENOVO\\Downloads\\deepfake_detection_model.h5") #path to the trained model saved as .h5 file
     return model
 
 # Function to preprocess and predict whether the image is real or fake
@@ -38,21 +38,21 @@ if uploaded_file is not None:
     img = Image.open(uploaded_file)
     st.image(img, caption="Uploaded Image", use_column_width=True)
 
-    # Preprocess the image and make predictions
+    # Preprocessing the image and make predictions
     st.write("Classifying...")
     prediction = preprocess_and_predict(img, model)
 
-    # Display the result with a more informative and styled output
+    # Displaying the result with a more informative and styled output
     if prediction > 0.5:
         st.markdown(f"<h3 style='color:green;'>The image is classified as: <strong>Real</strong> with {prediction*100:.2f}% confidence.</h3>", unsafe_allow_html=True)
     else:
         st.markdown(f"<h3 style='color:red;'>The image is classified as: <strong>Fake</strong> with {(1-prediction)*100:.2f}% confidence.</h3>", unsafe_allow_html=True)
 
-    # Add additional information or instructions
+    # Adding additional information or instructions
     st.write("Ensure the image is clear and well-lit for accurate results.")
     st.write("If the result is unexpected, try uploading another image or check the model performance.")
 
-# Add custom styling for the page
+# Adding custom styling for the page
 st.markdown("""
     <style>
     .stApp {
