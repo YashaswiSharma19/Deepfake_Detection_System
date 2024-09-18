@@ -12,7 +12,9 @@ The model is trained on a dataset consisting of both authentic and deepfake imag
 
 This project demonstrates the effectiveness of computer vision in combating the rising challenge of deepfake media, offering a tool for verifying the authenticity of images in various applications.
 ## Code
-click here for the code 
+click here for the code ()
+**Model Training Script:** [train_model.py](https://github.com/your-username/your-repository/blob/main/train_model.py)
+- **Deepfake Detection Script:** [deepfake_detection.py](https://github.com/YashaswiSharma19/Deepfake_Detection_System/blob/main/deepfake_detection_app.py)
 ## Usage
 
 - **Clone the repository**: Clone the repository to your local machine.
